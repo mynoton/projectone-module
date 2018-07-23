@@ -7,7 +7,8 @@ resource "aws_s3_bucket" "terraform_state" {
   versioning {
     enabled = "${var.s3_versioning}"
   }
+  # Cannot be variablized
   lifecycle {
-    prevent_destroy = "${var.s3_lifecycle}"
+    prevent_destroy = true
   }
 }

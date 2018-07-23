@@ -10,8 +10,3 @@ variable "s3_versioning" {
   description = "Define S3 versioning"
   default = true
 }
-
-variable "s3_lifecycle" {
-  description = "Define S3 lifecycle"
-  default = true
-}
