@@ -7,9 +7,9 @@ variable "s3_bucket_name" {
 }
 
 variable "s3_versioning" {
-  default = "Define S3 versioning"
+  description = "Define S3 versioning"
 }
 
 variable "s3_lifecycle" {
-  default = "Define S3 lifecycle"
+  description = "Define S3 lifecycle"
 }

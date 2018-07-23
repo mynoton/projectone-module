@@ -7,21 +7,23 @@ variable "dynamodb_tbl_name" {
 }
 
 variable "dynamodb_read_capacity" {
-  default = "Define DynamoDB read capacity"
+  description = "Define DynamoDB read capacity"
+  default = 1
 }
 
 variable "dynamodb_write_capacity" {
+  description = "Define DynamoDB write capacity"
   default = 1
 }
 
 variable "dynamodb_hash_key" {
-  default = 1
+  description = "Define DynamoDB hash key" 
 }
 
 variable "dynamodb_attribute_name" {
-  default = "Define DynamoDB attribute name"
+  description = "Define DynamoDB attribute name"
 }
 
 variable "dynamodb_attribute_type" {
-  default = "Define DynamoDB attribute type"
+  description = "Define DynamoDB attribute type"
 }
