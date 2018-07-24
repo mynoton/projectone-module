@@ -1,12 +1,4 @@
 #================================================================
-# Specify Terraform Version
-#================================================================
-
-terraform {
-  required_version = ">= 0.11, < 0.12"
-}
-
-#================================================================
 # ASG Configuration
 #================================================================
 
@@ -44,6 +36,8 @@ resource "aws_launch_configuration" "asg_configuration" {
 resource "aws_autoscaling_group" "asg" {
   name                 = "${var.cluster_name}-${aws_launch_configuration.asg_configuration.name}"
   launch_configuration = "${aws_launch_configuration.asg_configuration.id}"
+  # May need placement group
+  # Should change to vpc_zone_identifier 
   availability_zones   = ["${data.aws_availability_zones.all.names}"]
   load_balancers       = ["${aws_elb.elb.name}"]
   health_check_type    = "ELB"
