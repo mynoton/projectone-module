@@ -45,7 +45,7 @@ resource "aws_autoscaling_group" "asg" {
   name                 = "${var.cluster_name}-${aws_launch_configuration.asg_configuration.name}"
   launch_configuration = "${aws_launch_configuration.asg_configuration.id}"
   availability_zones   = ["${data.aws_availability_zones.all.names}"]
-  load_balancers       = ["${aws_elb.example.name}"]
+  load_balancers       = ["${aws_elb.elb.name}"]
   health_check_type    = "ELB"
 
   min_size         = "${var.min_size}"
@@ -199,7 +199,7 @@ resource "aws_cloudwatch_metric_alarm" "low_cpu_credit_balance" {
   metric_name = "CPUCreditBalance"
 
   dimensions = {
-    AutoScalingGroupName = "${aws_autoscaling_group.example.name}"
+    AutoScalingGroupName = "${aws_autoscaling_group.asg.name}"
   }
 
   comparison_operator = "LessThanThreshold"
