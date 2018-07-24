@@ -15,7 +15,7 @@ resource "aws_launch_configuration" "asg_configuration" {
   instance_type   = "${var.instance_type}"
   security_groups = ["${aws_security_group.instance.id}"]
 
-  user_data = "${data.template_file.user_data.rendered}"
+#  user_data = "${data.template_file.user_data.rendered}"
 
   lifecycle {
     create_before_destroy = true
@@ -26,16 +26,16 @@ resource "aws_launch_configuration" "asg_configuration" {
 # Template File
 #================================================================
 
-data "template_file" "user_data" {
-  template = "${file("${path.module}/user-data.sh")}"
-
-  vars {
-    server_port = "${var.server_port}"
-    db_address  = "${data.terraform_remote_state.db.address}"
-    db_port     = "${data.terraform_remote_state.db.port}"
-    server_text = "${var.server_text}"
-  }
-}
+#data "template_file" "user_data" {
+#  template = "${file("${path.module}/user-data.sh")}"
+#
+#  vars {
+#    server_port = "${var.server_port}"
+#    db_address  = "${data.terraform_remote_state.db.address}"
+#    db_port     = "${data.terraform_remote_state.db.port}"
+#    server_text = "${var.server_text}"
+#  }
+#}
 
 #================================================================
 # Apply ASG
@@ -71,9 +71,9 @@ resource "aws_autoscaling_schedule" "scale_out_during_business_hours" {
   count = "${var.enable_autoscaling}"
 
   scheduled_action_name  = "scale-out-during-business-hours"
-  min_size               = 2
-  max_size               = 4
-  desired_capacity       = 4
+  min_size               = "${var.min_size}"
+  max_size               = "${var.max_size}"
+  desired_capacity       = "${var.max_size}"
   recurrence             = "0 9 * * *"
   autoscaling_group_name = "${aws_autoscaling_group.asg.name}"
 }
@@ -82,9 +82,9 @@ resource "aws_autoscaling_schedule" "scale_in_at_night" {
   count = "${var.enable_autoscaling}"
 
   scheduled_action_name  = "scale-in-at-night"
-  min_size               = 2
-  max_size               = 4
-  desired_capacity       = 2
+  min_size               = "${var.min_size}"
+  max_size               = "${var.max_size}"
+  desired_capacity       = "${var.min_size}"
   recurrence             = "0 17 * * *"
   autoscaling_group_name = "${aws_autoscaling_group.asg.name}"
 }
