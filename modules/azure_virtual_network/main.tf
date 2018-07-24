@@ -1,5 +1,5 @@
 #================================================================
-# Virtual Network
+# Azure Virtual Network
 #================================================================
 
 resource "azurerm_virtual_network" "virtual_network" {

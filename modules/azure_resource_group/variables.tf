@@ -1,5 +1,5 @@
 #================================================================
-# Resource Group Variable
+# Azure Resource Group Variable
 #================================================================
 
 variable "resource_group_name" {
