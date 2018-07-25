@@ -3,13 +3,13 @@
 #================================================================
 
 variable "resource_group_name" {
-  description = "Azure Resource Group Name"
+  description = "Azure resource group name"
 }
 
 variable "resource_group_location" {
-  description = "Azure Resource Group Location"
+  description = "Azure resource group location"
 }
 
 variable "resource_group_tag_name" {
-  description = "Azure Resource Group Tag Name"
+  description = "Azure resource group tag name"
 }

@@ -3,21 +3,21 @@
 #================================================================
 
 variable "vnw_name" {
-  description = "Azure Virtual Network Name"
+  description = "Azure virtual network name"
 }
 
 variable "vnw_address" {
-  description = "Azure Virtual Network IP Address Range"
+  description = "Azure virtual network ip address range"
 }
 
 variable "vnw_location" {
-  description = "Azure Virtual Network Location"
+  description = "Azure virtual network location"
 }
 
 variable "vnw_tag_env" {
-  description = "Azure Virtual Network Tag Environment"
+  description = "Azure virtual network tag environment"
 }
 
 variable "resource_group_name" {
-  description = "Variable from Azure Resource Group Module"
+  description = "Variable from Azure resource group module"
 }

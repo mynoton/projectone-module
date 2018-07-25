@@ -1,7 +1,7 @@
 #================================================================
-# Azure Virtual Network Output
+# Azure Subnet Output
 #================================================================
 
-output "virtual_network_name_output" {
-  value = "${azurerm_virutal_network.virtual_network.name}"
+output "subnet_id_output" {
+  value = "${azurerm_subnet.subnet.id}"
 }
