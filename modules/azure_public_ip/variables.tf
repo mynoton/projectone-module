@@ -18,6 +18,6 @@ variable "public_ip_type" {
   description = "Azure public ip type"
 }
 
-variable "public_ip_environment" {
+variable "public_ip_tag_environment" {
   description = "Azure public ip environment"
 }
