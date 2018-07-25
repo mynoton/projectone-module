@@ -18,6 +18,6 @@ variable "vnw_tag_env" {
   description = "Azure virtual network tag environment"
 }
 
-variable "resource_group_name" {
+variable "vnw_resource_group_name" {
   description = "Variable from Azure resource group module"
 }

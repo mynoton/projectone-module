@@ -6,11 +6,11 @@ variable "subnet_name" {
   description = "Azure subnet name"
 }
 
-variable "resource_group_name" {
+variable "subnet_resource_group_name" {
   description = "Azure resource group name"
 }
 
-variable "virtual_network_name" {
+variable "subnet_virtual_network_name" {
   description = "Azure virtual network name"
 }
 
