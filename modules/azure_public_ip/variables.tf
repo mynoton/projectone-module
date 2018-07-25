@@ -10,7 +10,7 @@ variable "public_ip_location" {
   description = "Azure public ip location"
 }
 
-variable "public_resource_group_name" {
+variable "public_ip_resource_group_name" {
   description = "Azure resource group name"
 }
 
