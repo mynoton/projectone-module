@@ -14,7 +14,7 @@ variable "vm_resource_group_name" {
   description = "Azure virtual machine resource group name"
 }
 
-variable "vm_network_interface_id" {
+variable "vm_vnic_id" {
   description = "Azure virtual machine interface id"
 }
 
