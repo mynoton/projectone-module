@@ -15,7 +15,7 @@ resource "random_id" "random_id" {
 #================================================================
 
 resource "azurerm_storage_account" "storage_account" {
-    name                     = "diag${random_id.randomId.hex}"
+    name                     = "diag${random_id.random_id.hex}"
     resource_group_name      = "${var.storage_account_resource_group_name}"
     location                 = "${var.storage_account_location}"
     account_replication_type = "${var.storage_account_rep_type}"

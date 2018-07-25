@@ -2,7 +2,7 @@
 # Azure Storage Account Variable
 #================================================================
 
-variable "storage_random_id_resource_group_name" {
+variable "random_id_resource_group_name" {
   description = "Azure random id function resource group name"
 }
 
