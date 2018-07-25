@@ -2,7 +2,7 @@
 # Azure Virtual Network Interface
 #================================================================
 
-esource "azurerm_network_interface" "network_interface" {
+resource "azurerm_network_interface" "network_interface" {
   name                              = "${var.vnic_name}"
   location                          = "${var.vnic_location}"
   resource_group_name               = "${var.vnic_resource_group_name}"
