@@ -62,12 +62,22 @@ variable "vm_profile_admin_username" {
   description = "Azure virtual machine profile admin username"
 }
 
+variable "vm_config_disable_password_authentication" {
+  description = "Azure virtual machine configuration disable password authentication"
+  default = true
+}
+
 variable "vm_config_sshkey_path" {
   description = "Azure virtual machine configuration sshkey path"
 }
 
 variable "vm_config_sshkey_data" {
   description = "Azure virtual machine configuration sshkey data"
+}
+
+variable "vm_diagnostic_enable" {
+  description = "Azure virtual machine diagnostic storage uri"
+  default = "true"
 }
 
 variable "vm_diagnostic_storage_uri" {

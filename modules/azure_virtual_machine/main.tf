@@ -29,15 +29,15 @@ resource "azurerm_virtual_machine" "virtual_machine" {
     }
 
     os_profile_linux_config {
-        disable_password_authentication = true
+        disable_password_authentication = "${var.vm_config_disable_password_authentication}"
         ssh_keys {
-            path     = "${var.vm_config_sshkey_path}"
-            key_data = "${var.vm_config_sshkey_data}"
+            path                        = "${var.vm_config_sshkey_path}"
+            key_data                    = "${var.vm_config_sshkey_data}"
         }
     }
 
     boot_diagnostics {
-        enabled     = "true"
+        enabled     = "${var.vm_diagnostic_enable}"
         storage_uri = "${var.vm_diagnostic_storage_uri}"
     }
 
