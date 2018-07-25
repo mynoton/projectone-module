@@ -49,3 +49,7 @@ variable "nw_sg_rule_src_address_prefix" {
 variable "nw_sg_rule_dest_address_prefix" {
   description = "Azure network security group rule destination address prefix"
 }
+
+variable "nw_sg_tag_env" {
+  description = "Azure network security group tag environment"
+}
