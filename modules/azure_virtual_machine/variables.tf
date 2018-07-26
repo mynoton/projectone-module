@@ -15,6 +15,7 @@ variable "vm_resource_group_name" {
 }
 
 variable "vm_vnic_id" {
+  type = list
   description = "Azure virtual machine interface id"
 }
 
