@@ -30,9 +30,9 @@ variable "vnic_conf_private_ip_type" {
   description = "Azure virtual network interface configuration private ip type"
 }
 
-variable "vnic_conf_public_ip_id" {
-  description = "Azure virtual network interface configuration public ip id"
-}
+#variable "vnic_conf_public_ip_id" {
+#  description = "Azure virtual network interface configuration public ip id"
+#}
 
 variable "vnic_conf_lb_bk_address_pool" {
   description = "Azure virtual network interface load balancer backend address pool"

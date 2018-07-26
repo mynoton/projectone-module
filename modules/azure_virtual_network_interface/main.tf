@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "network_interface" {
       name                                    = "${var.vnic_conf_name}-${count.index + 1}"
       subnet_id                               = "${var.vnic_conf_subnet_id}"
       private_ip_address_allocation           = "${var.vnic_conf_private_ip_type}"
-      public_ip_address_id                    = "${var.vnic_conf_public_ip_id}"
+      #public_ip_address_id                   = "${var.vnic_conf_public_ip_id}"
       load_balancer_backend_address_pools_ids = ["${var.vnic_conf_lb_bk_address_pool}"]
       load_balancer_inbound_nat_rules_ids     = ["${var.vnic_conf_lb_nat_rule_id}"]
   }
