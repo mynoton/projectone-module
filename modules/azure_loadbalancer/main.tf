@@ -9,7 +9,7 @@ resource "azurerm_lb" "lb" {
 
   frontend_ip_configuration {
     name                 = "${var.lb_fe_conf_name}"
-    public_ip_address_id = "${var.lb_fe_conf_public_ip.id}"
+    public_ip_address_id = "${var.lb_fe_conf_public_ip_id}"
   }
 }
 
