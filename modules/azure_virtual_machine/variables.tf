@@ -26,7 +26,7 @@ variable "vm_avset" {
   description = "Azure virtual machine availability set"
 }
 
-variable "vm_count" {
+variable "vm_instance_count" {
   description = "Azure virtual machine count"
 }
 

@@ -9,7 +9,7 @@ resource "azurerm_virtual_machine" "virtual_machine" {
     network_interface_ids = ["${var.vm_vnic_id}"]
     vm_size               = "${var.vm_size}"
     availability_set_id   = "${var.vm_avset_id}"
-    count                 = "${var.vm_count}"
+    count                 = "${var.vm_instance_count}"
 
     storage_os_disk {
         name              = "${var.vm_disk_name}"

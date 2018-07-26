@@ -7,5 +7,5 @@ output "lb_backend_address_pool_id_output" {
 }
 
 output "azurerm_lb_nat_rule_id" {
-  value = "${azurerm_lb_nat_rule.lb_nat_rule.id}"
+  value = "${azurerm_lb_nat_rule.lb_nat_rule.*.id}"
 }
