@@ -23,6 +23,10 @@ variable "vm_size" {
   description = "Azure virtual machine size"
 }
 
+variable "vm_avset_id" {
+  description = "Azure virtual machine availability set id"
+}
+
 variable "vm_instance_count" {
   description = "Azure virtual machine count"
 }
