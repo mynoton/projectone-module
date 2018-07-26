@@ -3,11 +3,11 @@
 #================================================================
 
 resource "azurerm_virtual_network" "virtual_network" {
-  name                = "${var.vnw_name}"
-  address_space       = ["${var.vnw_address}"]
-  location            = "${var.vnw_location}"
-  resource_group_name = "${var.vnw_resource_group_name}"
+  name                = "${var.vnet_name}"
+  address_space       = ["${var.vnet_address}"]
+  location            = "${var.vnet_location}"
+  resource_group_name = "${var.vnet_resource_group_name}"
   tags {
-    environment = "${var.vnw_tag_env}"
+    environment = "${var.vnet_tag_env}"
   }
 }

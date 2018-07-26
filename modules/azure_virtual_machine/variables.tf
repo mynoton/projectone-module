@@ -22,6 +22,14 @@ variable "vm_size" {
   description = "Azure virtual machine size"
 }
 
+variable "vm_avset" {
+  description = "Azure virtual machine availability set"
+}
+
+variable "vm_avset" {
+  description = "Azure virtual machine count"
+}
+
 variable "vm_disk_name" {
   description = "Azure virtual machine disk name"
 }
