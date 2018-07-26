@@ -21,3 +21,7 @@ variable "public_ip_type" {
 variable "public_ip_tag_environment" {
   description = "Azure public ip environment"
 }
+
+variable "public_ip_dns_name" {
+  description = "Azure public ip dns name"
+}
