@@ -7,6 +7,7 @@ resource "azurerm_public_ip" "public_ip" {
   location                     = "${var.public_ip_location}"
   resource_group_name          = "${var.public_ip_resource_group_name}"
   public_ip_address_allocation = "${var.public_ip_type}"
+  domain_name_label            = "${var.public_ip_dns_name}"
   tags {
     environment                = "${var.public_ip_tag_environment}"
   }

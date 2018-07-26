@@ -19,5 +19,5 @@ variable "vnw_tag_env" {
 }
 
 variable "vnw_resource_group_name" {
-  description = "Variable from Azure resource group module"
+  description = "Azure resource group name"
 }
