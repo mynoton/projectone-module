@@ -6,7 +6,7 @@ variable "lb_resource_group_name" {}
 variable "lb_name" {}
 variable "lb_location" {}
 variable "lb_fe_conf_name" {}
-variable "lb_fe_conf_public_ip.id" {}
+variable "lb_fe_conf_public_ip_id" {}
 variable "lb_bk_address_pool_resource_group_name" {}
 variable "lb_bk_address_pool_name" {}
 variable "lb_nat_rule_resource_group_name" {}
