@@ -52,5 +52,5 @@ resource "azurerm_lb_probe" "lb_probe" {
   protocol            = "${var.lb_probe_protocol}"
   port                = "${var.lb_probe_port}"
   interval_in_seconds = "${var.lb_probe_interval_sec}"
-  number_of_probes    = "${var.lb_probe_number_probe}"
+  number_of_probes    = "${var.lb_probe_number}"
 }
